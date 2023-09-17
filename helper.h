@@ -4,43 +4,57 @@
 #include<time.h>
 #include<iostream>
 
+using namespace std;
+
 class Vuelo{
 public:
+    Vuelo (struct tm S, struct tm L, int N, int D): fechaSalida(S), 
+                                                    fechaLlegada(L), 
+                                                    nroVuelo(N),
+                                                    nroAsientosDisponibles(D){}
+    struct tm ObtFechaS();
+    struct tm ObtFechaL();
+    int ObtNV();
+    int ObtND();
 private:
     struct tm fechaSalida;
-    struct tm horaSalida;
     struct tm fechaLlegada;
-    struct tm horaLlegada;
     //Aerolinea aerolinea;
     int nroVuelo;
     int nroAsientosDisponibles;
 };
 
 class Pasajero{
+public:
+    Pasajero (string N, int D): nombre(N),dni(D){}
+    string Obtnombre();
+    int Obtdni();
 private:
-    std::string nombre;
+    string nombre;
     int dni;
 };
 
 class Reserva{
-
+public:
+    Reserva(int NA, Vuelo V);
+    void AgregarPasajero(Pasajero * p);
 private:
     int nroAsiento;
-    Pasajero * listapasajero;
+    Pasajero * listapasajero=NULL;
     Vuelo vuelo;
 };
 
 class Usuario{
 private:
-    std::string nombre;
-    std::string email;
+    string nombre;
+    string email;
     Reserva * listareseva;
 };
 
 class Aerolinea{
 public:
     Aerolinea();
-    Vuelo * buscarVuelos(struct tm fechaLlegada, struct tm fechaSalida, std::string origen, std::string destino);
+    Vuelo * buscarVuelos(struct tm fechaLlegada, struct tm fechaSalida, string origen, std::string destino);
     Reserva hacerReserva(Vuelo vuelo, Usuario usuario, int nroAsiento);
     void cancelarReservas(Reserva reservaAcancelar);
     Reserva * listareserva;
