@@ -15,7 +15,7 @@ public:
     struct tm ObtFechaS();
     struct tm ObtFechaL();
     int ObtNV();       //NV: "Número de Vuelo"
-    int ObtND();
+    int ObtND();       //ND: "rfdv"
 private:
     struct tm fechaSalida;
     struct tm fechaLlegada;
