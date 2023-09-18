@@ -14,7 +14,7 @@ public:
                                                     nroAsientosDisponibles(D){}
     struct tm ObtFechaS();
     struct tm ObtFechaL();
-    int ObtNV();
+    int ObtNV();       //NV: "Número de Vuelo"
     int ObtND();
 private:
     struct tm fechaSalida;
