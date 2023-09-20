@@ -2,7 +2,7 @@
 #include <iostream>
 #include <list>
 using namespace std;
-------------------------------------
+//------------------------------------
 /*Programa de Gestión de Vuelos (Equipo Nro 1 - Ejercicio 3- PP3)
 ------------------------------------------------------------------------
 Menú:
@@ -24,21 +24,16 @@ Sub-Menú (Gestionar usurios)
 1. Cargar nuevo usuario.
 2. Administrar Usuarios (solo Administrador)*/
 
-////////MAIN////////////////
-int main() {
-    ///variables////
-    Aerolinea nuestraAerolinea;
-    list <Usuario> listaUsuarios;
-    list <Vuelo> listaVuelos;
-    list <Reserva> listaReserva;
-    list <Usuario> usuarios;
-    ////variables///
-    menuPrincipal();
-    return 0;
-}
-////////MAIN///////////////
+///////FUNCIONES///////////
+Vuelo * buscarVuelos(){
 
-///////FUNCIONES////////////
+} // recibe parámetro de búsuqueda de aceurdo al enunciado y retorna un puntero a un Vuelvo.
+void gestionarReserva(){
+
+} // recibe un puntero a un Vuelo y reserva (modifica listaReserva) y devuelve void
+Usuario gestionarUsuario(){
+
+}   //pide datos de usuario. Si usuario no existe ofrece regsitrarse.
 void menuPrincipal() {
     int opcion;
 
@@ -67,20 +62,23 @@ void menuPrincipal() {
                 break;
             case 4:
                 cout << "Saliendo del programa." << endl;
-                return 0;
             default:
                 cout << "Opción no válida. Por favor, selecciona una opción válida." << endl;
         }
     }
 }
-
-Vuelo * buscarVuelos(){
-
-} // recibe parámetro de búsuqueda de aceurdo al enunciado y retorna un puntero a un Vuelvo.
-void gestionarReserva(){
-
-} // recibe un puntero a un Vuelo y reserva (modifica listaReserva) y devuelve void
-Usuario gestionarUsuario(){
-
-}   //pide datos de usuario. Si usuario no existe ofrece regsitrarse.
 ///////FUNCIONES////////////
+
+////////MAIN////////////////
+int main() {
+    ///estructuraDeDatos////
+    Aerolinea nuestraAerolinea;
+    list <Usuario> listaUsuarios;
+    list <Vuelo> listaVuelos;
+    list <Reserva> listaReserva;
+    list <Usuario> usuarios;
+    ////estructuraDeDatos///
+    menuPrincipal();
+    return 0;
+}
+////////MAIN///////////////
