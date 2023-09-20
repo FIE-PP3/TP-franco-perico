@@ -25,23 +25,16 @@ Sub-Menú (Gestionar usurios)
 2. Administrar Usuarios (solo Administrador)*/
 
 ///////FUNCIONES///////////
-Vuelo * buscarVuelos(){
 
-} // recibe parámetro de búsuqueda de aceurdo al enunciado y retorna un puntero a un Vuelvo.
-void gestionarReserva(){
-
-} // recibe un puntero a un Vuelo y reserva (modifica listaReserva) y devuelve void
-Usuario gestionarUsuario(){
-
+void verUsuario(){
 }   //pide datos de usuario. Si usuario no existe ofrece regsitrarse.
 void menuPrincipal() {
     int opcion;
-
     while (true) {
         cout << "Menú Principal:" << endl;
         cout << "1. Buscar vuelos" << endl;
         cout << "2. Gestionar Vuelos" << endl;
-        cout << "3. Gestionar Usuario" << endl;
+        cout << "3. Ver Usuarios" << endl;
         cout << "4. Salir" << endl;
         cout << "Seleccione una opción: ";
 
@@ -49,19 +42,20 @@ void menuPrincipal() {
 
         switch (opcion) {
             case 1:
-                cout << "Has seleccionado la Opción 1." << endl;
+                cout << "Has seleccionado la Opcion 1: Buscar Vuelos." << endl;
                 buscarVuelos();
                 break;
             case 2:
-                cout << "Has seleccionado la Opción 2." << endl;
+                cout << "Has seleccionado la Opcion 2: Gestionar Vuelos." << endl;
                 gestionarReserva();
                 break;
             case 3:
-                cout << "Has seleccionado la Opción 3." << endl;
-                gestionarUsuario();
+                cout << "Has seleccionado la Opcion 3: Ver Usuarios." << endl;
+                verUsuario();
                 break;
             case 4:
                 cout << "Saliendo del programa." << endl;
+                exit (-1);
             default:
                 cout << "Opción no válida. Por favor, selecciona una opción válida." << endl;
         }
