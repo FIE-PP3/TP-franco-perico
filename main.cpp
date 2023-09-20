@@ -1,5 +1,6 @@
 #include "helper.h"
-
+#include <iostream>
+#include <list>
 using namespace std;
 ------------------------------------
 /*Programa de Gestión de Vuelos (Equipo Nro 1 - Ejercicio 3- PP3)
@@ -22,13 +23,18 @@ Sub-Menú (Gestionar reservas)
 Sub-Menú (Gestionar usurios)
 1. Cargar nuevo usuario.
 2. Administrar Usuarios (solo Administrador)*/
-#include "helper.h"
-#include <iostream>
-using namespace std;
 
 ////////MAIN////////////////
 int main() {
+    ///variables////
+    Aerolinea nuestraAerolinea;
+    list <Usuario> listaUsuarios;
+    list <Vuelo> listaVuelos;
+    list <Reserva> listaReserva;
+    list <Usuario> usuarios;
+    ////variables///
     menuPrincipal();
+    return 0;
 }
 ////////MAIN///////////////
 
@@ -67,13 +73,14 @@ void menuPrincipal() {
         }
     }
 }
-Vuelo buscarVuelos(){
 
-}
+Vuelo * buscarVuelos(){
+
+} // recibe parámetro de búsuqueda de aceurdo al enunciado y retorna un puntero a un Vuelvo.
 void gestionarReserva(){
 
-}
+} // recibe un puntero a un Vuelo y reserva (modifica listaReserva) y devuelve void
 Usuario gestionarUsuario(){
 
-}
+}   //pide datos de usuario. Si usuario no existe ofrece regsitrarse.
 ///////FUNCIONES////////////
