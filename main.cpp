@@ -38,7 +38,7 @@ class Reserva {};
 int main() {
     menuPrincipal();
 }
-////////MAIN////////////////
+////////MAIN///////////////
 
 ///////FUNCIONES////////////
 void menuPrincipal() {
