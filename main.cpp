@@ -27,12 +27,20 @@ Sub-Menú (Gestionar usurios)
 #include <iostream>
 using namespace std;
 
+///////CLASES///////////////
+class Vuelo {};
+class Usuario {};
+class Pasajero {};
+class Reserva {};
+////////////////////////////
+
+////////MAIN////////////////
 int main() {
     menuPrincipal();
 }
+////////MAIN////////////////
 
-using namespace std;
-
+///////FUNCIONES////////////
 void menuPrincipal() {
     int opcion;
 
@@ -67,5 +75,13 @@ void menuPrincipal() {
         }
     }
 }
+Vuelo buscarVuelos(){
 
-void
+}
+void gestionarReserva(){
+
+}
+Usuario gestionarUsuario(){
+
+}
+///////FUNCIONES////////////
