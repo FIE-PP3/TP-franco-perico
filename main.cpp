@@ -27,23 +27,21 @@ Sub-Menú (Gestionar usurios)
 #include <iostream>
 using namespace std;
 
+////////MAIN////////////////
 int main() {
     menuPrincipal();
-    buscarVuelos();
-    gestionarReserva();
-    gestionarUsuario();
 }
+////////MAIN///////////////
 
-using namespace std;
-
+///////FUNCIONES////////////
 void menuPrincipal() {
     int opcion;
 
     while (true) {
         cout << "Menú Principal:" << endl;
-        cout << "1. Opción 1" << endl;
-        cout << "2. Opción 2" << endl;
-        cout << "3. Opción 3" << endl;
+        cout << "1. Buscar vuelos" << endl;
+        cout << "2. Gestionar Vuelos" << endl;
+        cout << "3. Gestionar Usuario" << endl;
         cout << "4. Salir" << endl;
         cout << "Seleccione una opción: ";
 
@@ -52,15 +50,15 @@ void menuPrincipal() {
         switch (opcion) {
             case 1:
                 cout << "Has seleccionado la Opción 1." << endl;
-                // Agrega aquí la lógica para la Opción 1
+                buscarVuelos();
                 break;
             case 2:
                 cout << "Has seleccionado la Opción 2." << endl;
-                // Agrega aquí la lógica para la Opción 2
+                gestionarReserva();
                 break;
             case 3:
                 cout << "Has seleccionado la Opción 3." << endl;
-                // Agrega aquí la lógica para la Opción 3
+                gestionarUsuario();
                 break;
             case 4:
                 cout << "Saliendo del programa." << endl;
@@ -70,3 +68,13 @@ void menuPrincipal() {
         }
     }
 }
+Vuelo buscarVuelos(){
+
+}
+void gestionarReserva(){
+
+}
+Usuario gestionarUsuario(){
+
+}
+///////FUNCIONES////////////
