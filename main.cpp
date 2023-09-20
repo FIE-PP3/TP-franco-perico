@@ -82,5 +82,5 @@ void gestionarReserva(){
 } // recibe un puntero a un Vuelo y reserva (modifica listaReserva) y devuelve void
 Usuario gestionarUsuario(){
 
-}   //pide datos de usuario. Si usuario no existe ofrece regsitrarse. Si existe da persmisos acorde a tipo de usuario (todo: pasajero o administrador)
+}   //pide datos de usuario. Si usuario no existe ofrece regsitrarse.
 ///////FUNCIONES////////////
