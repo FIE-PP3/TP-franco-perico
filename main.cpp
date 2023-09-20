@@ -27,13 +27,6 @@ Sub-Menú (Gestionar usurios)
 #include <iostream>
 using namespace std;
 
-///////CLASES///////////////
-class Vuelo {};
-class Usuario {};
-class Pasajero {};
-class Reserva {};
-////////////////////////////
-
 ////////MAIN////////////////
 int main() {
     menuPrincipal();
