@@ -2,16 +2,33 @@
 #define VUELO_H
 
 
+
 class Vuelo{
 public:
-    Vuelo (fechahora Salida, fechahora Llegada, int N, int D): fechaSalida(Salida), 
-                                                    fechaLlegada(Llegada), 
-                                                    nroVuelo(N),
-                                                    nroAsientosDisponibles(D){}
-    fechahora ObtFechaS();
-    fechahora ObtFechaL();
-    int ObtNV();       //NV: "Número de Vuelo"
-    int ObtND();       //ND: "rfdv"
+    Vuelo (fechahora Salida, fechahora Llegada, int N, int D)
+    {
+        fechaSalida=Salida; 
+        fechaLlegada=Llegada;
+        nroVuelo=N;
+        nroAsientosDisponibles=D;
+    }
+    fechahora ObtFechaS()
+    {
+        return fechaSalida;
+    };
+    fechahora ObtFechaL()
+    {
+        return fechaLlegada;
+    };
+    int ObtNV()
+    {
+        return nroVuelo;
+    };
+    int ObtND()
+    {
+        return nroAsientosDisponibles;
+    };
+
 private:
     fechahora fechaSalida;
     fechahora fechaLlegada;
@@ -19,25 +36,5 @@ private:
     int nroVuelo;
     int nroAsientosDisponibles;
 };
-
-
-fechahora Vuelo::ObtFechaS()
-{
-    return fechaSalida;
-}
-
-fechahora Vuelo::ObtFechaL()
-{
-    return fechaLlegada;
-}
-
-
-
-int Vuelo::ObtND()
-{
-    return nroAsientosDisponibles;
-}
-
-
 
 #endif
