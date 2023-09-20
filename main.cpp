@@ -24,7 +24,7 @@ Sub-Menú (Gestionar usurios)
 1. Cargar nuevo usuario.
 2. Administrar Usuarios (solo Administrador)*/
 
-///////FUNCIONES////////////
+///////FUNCIONES///////////
 Vuelo * buscarVuelos(){
 
 } // recibe parámetro de búsuqueda de aceurdo al enunciado y retorna un puntero a un Vuelvo.
