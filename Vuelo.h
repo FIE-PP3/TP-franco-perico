@@ -15,19 +15,19 @@ public:
     fechahora ObtFechaS()
     {
         return fechaSalida;
-    };
+    }
     fechahora ObtFechaL()
     {
         return fechaLlegada;
-    };
+    }
     int ObtNV()
     {
         return nroVuelo;
-    };
+    }
     int ObtND()
     {
         return nroAsientosDisponibles;
-    };
+    }
 
 private:
     fechahora fechaSalida;
