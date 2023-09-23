@@ -1,6 +1,10 @@
 #ifndef RESERVA_H
 #define RESERVA_H
 
+#include <iostream>
+#include <list>
+using namespace std;
+
 class Reserva{
 public:
     Reserva (int numeroDeAsiento, Vuelo *vuelo){

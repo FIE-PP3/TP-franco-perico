@@ -19,20 +19,13 @@ modelo de interfaz
 Programa de Gestión de Vuelos (Equipo Nro 1 - Ejercicio 3- PP3)
 ------------------------------------------------------------------------
 Menú:
-1. Buscar Vuelos. // ver de agregar busqueda de reservas, que no dice la 
-2. Gestionar reservas:
-3. Gestionar usuarios.
---------------------------
-Sub-Menú (Buscar Vuelos)
-1. Por (parámetros A,B,C).
-2. Por (parámetros D,E,F).
-3. Por (parámetros ....).
-Etc...
------------------------------
-Sub-Menú (Gestionar reservas)
-1. Reservar
-2. Cancelar una reserva.
----------------------------
-Sub-Menú (Gestionar usurios)
-1. Cargar nuevo usuario.
-2. Administrar Usuarios (solo Administrador)
+1.ingrese a su cuenta.
+--------> ingrese su nombre de usuario
+-------------------* Buscar Vuelos
+-------------------* Gestionar Reservas
+----------------------------+ Hacer Reservas
+----------------------------+ Cancelar Reservas
+--------> Menú Principal
+2.registrarme.
+--------> Agregar un Usuario.
+--------> Menú principal.

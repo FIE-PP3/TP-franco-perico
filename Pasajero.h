@@ -1,6 +1,9 @@
 #ifndef PASAJERO_H
 #define PASAJERO_H
 
+#include <iostream>
+#include <list>
+using namespace std;
 
 class Pasajero{
 public:
