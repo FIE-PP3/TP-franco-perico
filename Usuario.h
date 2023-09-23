@@ -1,6 +1,10 @@
 #ifndef USUARIO_H
 #define USUARIO_H
 
+#include <iostream>
+#include <list>
+using namespace std;
+
 typedef struct busqueda {
     int fechaSalida;
     int horaSalida;
@@ -11,8 +15,14 @@ typedef struct busqueda {
 
 class Usuario{
 public:
-    Usuario (){};
-    int buscarVuelos(){
+    Usuario (string _nombre, string _email){
+        nombre=_nombre;
+        email=_email;
+    }
+    void AgregarReserva(Reserva R1){
+        listareseva.push_back(R1);
+    }
+    /*int buscarVuelos(){
         Vuelo * vueloBuscado;
         Busqueda busqueda;
         cout << "Introduzca fecha de salida: " << endl;
@@ -34,7 +44,7 @@ public:
     void gestionarReserva(){
 
     } // recibe un número de un Vuelo y reserva dicho vuelo (modifica listaReserva), agrega reserva a lista de reservas, y devuelve void
-
+*/
 private:
     string nombre;
     string email;
