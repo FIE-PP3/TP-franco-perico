@@ -1,13 +1,13 @@
 #ifndef USUARIO_H
 #define USUARIO_H
 
-typedef struct Busqueda {
+typedef struct busqueda {
     int fechaSalida;
     int horaSalida;
     int fechaLlegada;
     int horaLlegada;
     int numeroDeVuelo;
-};
+}Busqueda;
 
 class Usuario{
 public:
@@ -31,14 +31,14 @@ public:
         return vueloBuscado->ObtNV();
     } // recibe parámetro de búsuqueda de aceurdo al enunciado y retorna el numero de Vuelvo.
 
-    void gestionarReserva(Vuelo * vueloBuscado){
+    void gestionarReserva(){
 
     } // recibe un número de un Vuelo y reserva dicho vuelo (modifica listaReserva), agrega reserva a lista de reservas, y devuelve void
 
 private:
     string nombre;
     string email;
-    Reserva * listareseva;
+    list <Reserva> listareseva;
 };
 
 #endif
