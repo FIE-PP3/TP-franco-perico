@@ -7,15 +7,15 @@ using namespace std;
 
 class Reserva{
 public:
-    Reserva (int numeroDeAsiento, Vuelo *vuelo){
-        nroAsiento = numeroDeAsiento;
+    Reserva (int CantAsientosAreservar, Vuelo *vuelo){
+        CantAsientos = CantAsientosAreservar;
         nroDeVuelo = vuelo;
     }
     void AgregarPasajero(Pasajero p) {
         listapasajero.push_back(p);
     }
 private:
-    int nroAsiento;
+    int CantAsientos;
     list <Pasajero> listapasajero;
     Vuelo * nroDeVuelo;
 };
