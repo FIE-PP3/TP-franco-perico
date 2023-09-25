@@ -22,6 +22,9 @@ public:
     void AgregarReserva(Reserva R1){
         listareseva.push_back(R1);
     }
+    string getnombre(){
+        return nombre;
+    }
     /*int buscarVuelos(){
         Vuelo * vueloBuscado;
         Busqueda busqueda;
