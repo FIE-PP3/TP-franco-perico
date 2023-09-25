@@ -38,6 +38,15 @@ public:
     {
         return nroAsientosDisponibles;
     }
+    string getOrigen(){
+        return origen;
+    }
+    string getDestino(){
+        return destino;
+    }
+    void restarAsientosDisponibles(int cantAsientos){
+        nroAsientosDisponibles -= cantAsientos;
+    }
 
 private:
     fechahora fechaSalida;
