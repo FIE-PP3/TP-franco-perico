@@ -12,6 +12,7 @@ public:
         CantAsientos = CantAsientosAreservar;
         nroDeVuelo = vuelo;
     }
+    ~Reserva(){}
     void AgregarPasajero(Pasajero p) {
         listapasajero.push_back(p);
     }

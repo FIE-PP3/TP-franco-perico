@@ -5,14 +5,6 @@
 #include <list>
 using namespace std;
 
-typedef struct busqueda {
-    int fechaSalida;
-    int horaSalida;
-    int fechaLlegada;
-    int horaLlegada;
-    int numeroDeVuelo;
-}Busqueda;
-
 class Usuario{
 public:
     Usuario (string _nombre, string _email){
