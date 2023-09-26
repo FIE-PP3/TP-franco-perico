@@ -2,21 +2,6 @@
 #include <list>
 using namespace std;
 #include "helper.h"
-//------------------------------------
-/*Programa de Gestión de Vuelos (Equipo Nro 1 - Ejercicio 3- PP3)
-------------------------------------------------------------------------
-Menú:
-1.ingrese a su cuenta.
---------> ingrese su nombre de usuario
--------------------* Buscar Vuelos
--------------------* Gestionar Reservas
-----------------------------+ Hacer Reservas
-----------------------------+ Cancelar Reservas
---------> Menú Principal
-2.registrarme.
---------> Agregar un Usuario.
---------> Menú principal. 
-*/
 
 void menuPrincipal(Aerolinea & nuestraAerolinea) {
     int opcion,nrovuelo=1;
