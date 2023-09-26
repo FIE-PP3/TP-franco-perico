@@ -7,20 +7,20 @@ void menuPrincipal(Aerolinea & nuestraAerolinea) {
     int opcion,nrovuelo=1;
     string name_login,origen,destino,email_login;
     list <Vuelo> vuelosencontrados;
-    fechahora salida={0,0,0},llegada={0,0,0};
+    fechahora salida={0,0,0},llegada={0,0,0};   //Declaraciones de estructuras tipo FH
     bool MenuUsuario=true;
-    Vuelo * vueloareservar;
-    Usuario * usuarioQueReserva;
+    Vuelo * vueloareservar;                     //Declaración de punteros a un Objeto de la clase Vuelo
+    Usuario * usuarioQueReserva;                //Declaración de punteros a un Objeto de la clase Vuelo
     while (true) {
-        cout << endl << "Menú Principal:" << endl;
+        cout << endl << "Menú Principal:" << endl;      //Menú de Jerarquía 1
         cout << "1. Ingrese a su cuenta" << endl;
         cout << "2. Registrarme" << endl;
         cout << "3. Salir" << endl;
         cout << "Seleccione una opción: ";
         cin >> opcion;
         switch (opcion) {
-            case 1:{
-                cout << endl<< "Ingrese su nombre de usuario" << endl; 
+            case 1:{//Opción para ingresar con credencial de un usuario    //Menú de Jerarquía 2
+                cout << endl<< "Ingrese su nombre de usuario" << endl;  //Menú de Jerarquía 2
                 cin>>name_login;
                 if(nuestraAerolinea.Accesousuario(name_login)){      //funcion si existe el usuario "true" si no existe "false" y vuelve al menu principal
                     MenuUsuario=true;
@@ -92,7 +92,7 @@ void menuPrincipal(Aerolinea & nuestraAerolinea) {
                 }
                 break;
             }
-            case 2:{//Funcion Para agregar un usuario
+            case 2:{//Opción para registrar un usuario    //Menú de Jerarquía 2            
                 cout << endl<< "Agregar un usuario" << endl;
                 cout << "Coloque un nombre para el Usuario" << endl;
                 cin>>name_login;
@@ -101,37 +101,36 @@ void menuPrincipal(Aerolinea & nuestraAerolinea) {
                 Usuario addusuario(name_login,email_login);
                 nuestraAerolinea.agregarusuarios(addusuario);
                 break;
-            }
-            case 3:{
+            }                                                      
+            case 3:{ //Opción para Salir del programa    //Menú de Jerarquía 2                          
                 cout << endl<< "Saliendo del programa." << endl;
                 exit (-1);
-            }
+            }                                                       
             default:
                 cout << "Opción no válida. Por favor, selecciona una opción válida." << endl;
         }
-    }
-}
+    } //Menú Principal
+}       //Menú Principal
 
-////////MAIN////////////////
 int main() {
     ///INICIALIZACION////
-    Aerolinea nuestraaerolinea;
+    Aerolinea nuestraaerolinea;     //Instanciación de Obj de la Clase Aerolínea
     fechahora f[10]={{12,1,7},{13,1,7},{12,10,9},{13,10,9},{12,25,12},{13,25,12},{12,31,12},{13,31,12},{12,2,4},{13,2,4}}; 
-    Vuelo v1(f[0],f[1],1,25,"BsAs","Cordoba");
+    Vuelo v1(f[0],f[1],1,25,"BsAs","Cordoba");   //Instanciaciones de Objetos de la Clase Vuelo
     Vuelo v2(f[2],f[3],2,20,"Cordoba","BsAs");
     Vuelo v3(f[4],f[5],3,15,"BsAs","Salta");
     Vuelo v4(f[6],f[7],4,2,"Salta","BsAs");
     Vuelo v5(f[4],f[5],5,0,"BsAs","Salta");
-    nuestraaerolinea.agregarvuelos(v1);
+    nuestraaerolinea.agregarvuelos(v1);         //Agregaciones de Objetos de la Clase Vuelo por método de Obj de Clase Aerolínea
     nuestraaerolinea.agregarvuelos(v2);
     nuestraaerolinea.agregarvuelos(v3);
     nuestraaerolinea.agregarvuelos(v4);
     nuestraaerolinea.agregarvuelos(v5);
-    Usuario s1("hernan","lenonpreto65@gmail.com"),s2("juancito","juancitopelado@gmail.com");
-    nuestraaerolinea.agregarusuarios(s1);
+    Usuario s1("hernan","lenonpreto65@gmail.com");      //Instanciaciones de Objetos de la Clase Usuario
+    Usuario s2("juancito","juancitopelado@gmail.com");
+    nuestraaerolinea.agregarusuarios(s1);       //Agregación de Objetos de la Usuario Vuelo por método de Obj de Clase Aerolínea
     nuestraaerolinea.agregarusuarios(s2);
     ///INICIALIZACION////
-    menuPrincipal(nuestraaerolinea);
+    menuPrincipal(nuestraaerolinea);        //Llamada a Menú Principal pasando por parámetro Obj de la Case Aerolínea
     return 0;
-}
-////////MAIN///////////////
+}       //Programa principal
