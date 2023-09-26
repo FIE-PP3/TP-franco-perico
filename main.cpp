@@ -131,11 +131,11 @@ int main() {
     ///INICIALIZACION////
     Aerolinea nuestraaerolinea;
     fechahora f[10]={{1,2,3,},{1,2,3},{1,2,3},{1,2,3},{1,2,3},{1,2,3},{1,2,3},{1,2,3},{1,2,3},{1,2,3}}; 
-    Vuelo v1(f[0],f[1],1,25,"Buenos","Cordoba");
-    Vuelo v2(f[2],f[3],2,20,"Cordoba","Buenos");
-    Vuelo v3(f[4],f[5],3,15,"Buenos","Salta");
-    Vuelo v4(f[6],f[7],4,2,"Salta","Buenos");
-    Vuelo v5(f[8],f[9],5,0,"Buenos","Salta");
+    Vuelo v1(f[0],f[1],1,25,"BsAs","Cordoba");
+    Vuelo v2(f[2],f[3],2,20,"Cordoba","BsAs");
+    Vuelo v3(f[4],f[5],3,15,"BsAs","Salta");
+    Vuelo v4(f[6],f[7],4,2,"Salta","BsAs");
+    Vuelo v5(f[8],f[9],5,0,"BsAs","Salta");
     nuestraaerolinea.agregarvuelos(v1);
     nuestraaerolinea.agregarvuelos(v2);
     nuestraaerolinea.agregarvuelos(v3);

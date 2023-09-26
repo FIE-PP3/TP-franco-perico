@@ -54,7 +54,6 @@ public:
 private:
     fechahora fechaSalida;
     fechahora fechaLlegada;
-    //Aerolinea aerolinea;
     string origen;
     string destino;
     int nroVuelo;
