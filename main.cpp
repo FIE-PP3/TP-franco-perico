@@ -41,7 +41,7 @@ Menú:
 ///////FUNCIONES///////////
 void menuPrincipal(Aerolinea & nuestraAerolinea) {
     int opcion,nrovuelo=1;
-    string name_login,origen,destino;
+    string name_login,origen,destino,email_login;
     list <Vuelo> vuelosencontrados; // = nuestraAerolinea.buscarVuelos(origen,destino);
     fechahora salida={0,0,0},llegada={0,0,0};
     bool MenuUsuario=true;
@@ -124,9 +124,14 @@ void menuPrincipal(Aerolinea & nuestraAerolinea) {
                 }
                 break;
             }
-            case 2:{
+            case 2:{//Funcion Para agregar un usuario
                 cout << "Agregar un usuario" << endl;
-                //Funcion Para agregar un usuario
+                cout << "Coloque un nombre para el Usuario" << endl;
+                cin>>name_login;
+                cout << "Coloque un email para el Usuario" << endl;
+                cin>>email_login;
+                Usuario addusuario(name_login,email_login);
+                nuestraAerolinea.agregarusuarios(addusuario);
                 break;
             }
             case 3:{
