@@ -7,12 +7,17 @@ using namespace std;
 
 class Reserva{
 public:
-    Reserva (int CantAsientosAreservar, Vuelo *vuelo){
+    Reserva (int _nroreserva,int CantAsientosAreservar, Vuelo *vuelo){
+        Nroreserva = _nroreserva;
         CantAsientos = CantAsientosAreservar;
         nroDeVuelo = vuelo;
     }
     void AgregarPasajero(Pasajero p) {
         listapasajero.push_back(p);
+    }
+    int Nroreserva;
+    void AgregarDisponibilidad(){
+        nroDeVuelo->agregarAsientosDisponibles(listapasajero.size());
     }
 private:
     int CantAsientos;
