@@ -22,9 +22,11 @@ public:
             if(aux->Nroreserva == nroReserva){
                 aux->AgregarDisponibilidad();
                 listareseva.erase(aux);
+                cout<<"Se elimino la reserva nro "<<nroReserva<<endl;
                 return true;
                 }
         }
+        cout<<"No Existe la reserva o no tiene acceso a ella"<<endl;
         return false;
     }
 private:
