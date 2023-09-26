@@ -71,6 +71,7 @@ public:
                 reserva.AgregarPasajero(pasajeroACargar);
             }
             vuelo->restarAsientosDisponibles(cantAsiento);
+            usuario->AgregarReserva(reserva);
         } else {
             cout<<"No hay "<<cantAsiento<<" disponible en el vuelo Nro"<<vuelo->ObtNV()<<endl;
         }
