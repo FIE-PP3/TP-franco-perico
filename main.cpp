@@ -130,7 +130,7 @@ void menuPrincipal(Aerolinea & nuestraAerolinea) {
 int main() {
     ///INICIALIZACION////
     Aerolinea nuestraaerolinea;
-    fechahora f[10]={{1,2,3,},{1,2,3},{1,2,3},{1,2,3},{1,2,3},{1,2,3},{1,2,3},{1,2,3},{1,2,3},{1,2,3}}; 
+    fechahora f[10]={{12,1,7},{13,1,7},{12,10,9},{13,10,9},{12,25,12},{13,25,12},{12,31,12},{13,31,12},{12,2,4},{13,2,4}}; 
     Vuelo v1(f[0],f[1],1,25,"BsAs","Cordoba");
     Vuelo v2(f[2],f[3],2,20,"Cordoba","BsAs");
     Vuelo v3(f[4],f[5],3,15,"BsAs","Salta");
