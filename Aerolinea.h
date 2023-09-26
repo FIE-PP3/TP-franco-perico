@@ -58,7 +58,8 @@ public:
     }
     void hacerReserva(Vuelo * vuelo, Usuario * usuario, int cantAsiento){
         if(Disponibilidad(cantAsiento,vuelo)){
-            Reserva reserva(cantAsiento,vuelo);
+            nrosreserva++;
+            Reserva reserva(nrosreserva,cantAsiento,vuelo);
             string nombrepasajero;
             int dniPasajero;
             Pasajero pasajeroACargar("",0);
@@ -93,9 +94,15 @@ public:
             return true;
         return false;
     }
-    void cancelarReservas(Reserva reservaAcancelar);
+    void cancelarReservas(int nroReserva){
+        for(auto aux= listareserva.begin(); aux != listareserva.end();aux++){
+            if(aux->Nroreserva == nroReserva)
+                listareserva.erase(aux);
+        }
+    }
     list <Reserva> listareserva;
 private:
+    int nrosreserva=0;
     list <Vuelo> listavuelo;
     list <Usuario> listausuario;
 };

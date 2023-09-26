@@ -47,6 +47,9 @@ public:
     void restarAsientosDisponibles(int cantAsientos){
         nroAsientosDisponibles -= cantAsientos;
     }
+    void agregarAsientosDisponibles(int cantAsientos){
+        nroAsientosDisponibles += cantAsientos;
+    }
 
 private:
     fechahora fechaSalida;

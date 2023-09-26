@@ -17,32 +17,11 @@ Menú:
 --------> Agregar un Usuario.
 --------> Menú principal. 
 */
-///INICIALIZACION////
-/*Aerolinea  EstadoInicial(){ 
-    Aerolinea nuestraaerolinea;
-    fechahora f[10]={{1,2,3,},{1,2,3},{1,2,3},{1,2,3},{1,2,3},{1,2,3},{1,2,3},{1,2,3},{1,2,3},{1,2,3}}; 
-    Vuelo v1(f[0],f[1],1,25,"Buenos Aires","Cordoba");
-    Vuelo v2(f[2],f[3],2,20,"Cordoba","Buenos Aires");
-    Vuelo v3(f[4],f[5],3,15,"Buenos Aires","Salta");
-    Vuelo v4(f[6],f[7],4,2,"Salta","Buenos Aires");
-    Vuelo v5(f[8],f[9],5,0,"Buenos Aires","Salta");
-    nuestraaerolinea.agregarvuelos(v1);
-    nuestraaerolinea.agregarvuelos(v2);
-    nuestraaerolinea.agregarvuelos(v3);
-    nuestraaerolinea.agregarvuelos(v4);
-    nuestraaerolinea.agregarvuelos(v5);
-    Usuario s1("hernan","lenonpreto65@gmail.com"),s2("juancito","juancitopelado@gmail.com");
-    nuestraaerolinea.agregarusuarios(s1);
-    nuestraaerolinea.agregarusuarios(s2);
-    return nuestraaerolinea;
-}*/
-///INICIALIZACION////
 
-///////FUNCIONES///////////
 void menuPrincipal(Aerolinea & nuestraAerolinea) {
     int opcion,nrovuelo=1;
     string name_login,origen,destino,email_login;
-    list <Vuelo> vuelosencontrados; // = nuestraAerolinea.buscarVuelos(origen,destino);
+    list <Vuelo> vuelosencontrados;
     fechahora salida={0,0,0},llegada={0,0,0};
     bool MenuUsuario=true;
     Vuelo * vueloareservar;
@@ -88,7 +67,6 @@ void menuPrincipal(Aerolinea & nuestraAerolinea) {
                             vuelosencontrados=nuestraAerolinea.buscarVuelos(llegada,salida,origen,destino);
                             cout<<"Vuelos encontrados:"<<endl;
                             nuestraAerolinea.imprimir(vuelosencontrados);
-
                             break;
                         case 2:
                             cout<<"1- Hacer Reservas"<<endl;
@@ -97,8 +75,7 @@ void menuPrincipal(Aerolinea & nuestraAerolinea) {
                             cin>> opcion;
                             switch (opcion)
                             {
-                            case 1:
-                                //funcion de la aerolinea  hacer reservas
+                            case 1: //funcion de la aerolinea  hacer reservas
                                 cout<<"ingrese el numero de vuelo a reservar "<<endl;
                                 cin>>nrovuelo;
                                 int cantasiento;
@@ -108,8 +85,13 @@ void menuPrincipal(Aerolinea & nuestraAerolinea) {
                                 usuarioQueReserva=nuestraAerolinea.IdentificacionUsuario(name_login);
                                 nuestraAerolinea.hacerReserva(vueloareservar,usuarioQueReserva,cantasiento);
                                 break;
-                            case 2:
-                                //funcion de la aerolinea  Cancelar reservas
+                            case 2://funcion de la aerolinea  Cancelar reservas
+                                int nroReserva;
+                                cout<<"Ingrese Nro de reserva a cancelar"<<endl;
+                                cin>>nroReserva;
+                                usuarioQueReserva=nuestraAerolinea.IdentificacionUsuario(name_login);
+                                if(usuarioQueReserva->eliminarreserva(nroReserva))
+                                    nuestraAerolinea.cancelarReservas(nroReserva);
                             default:
                                 break;
                             }
@@ -146,7 +128,7 @@ void menuPrincipal(Aerolinea & nuestraAerolinea) {
 
 ////////MAIN////////////////
 int main() {
-    //Aerolinea * inicio=EstadoInicial();    ///INICIALIZACION////
+    ///INICIALIZACION////
     Aerolinea nuestraaerolinea;
     fechahora f[10]={{1,2,3,},{1,2,3},{1,2,3},{1,2,3},{1,2,3},{1,2,3},{1,2,3},{1,2,3},{1,2,3},{1,2,3}}; 
     Vuelo v1(f[0],f[1],1,25,"Buenos","Cordoba");
@@ -162,7 +144,7 @@ int main() {
     Usuario s1("hernan","lenonpreto65@gmail.com"),s2("juancito","juancitopelado@gmail.com");
     nuestraaerolinea.agregarusuarios(s1);
     nuestraaerolinea.agregarusuarios(s2);
-    
+    ///INICIALIZACION////
     menuPrincipal(nuestraaerolinea);
     return 0;
 }
