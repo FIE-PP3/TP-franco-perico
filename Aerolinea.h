@@ -75,17 +75,18 @@ public:
             cout<<"No hay "<<cantAsiento<<" disponible en el vuelo Nro"<<vuelo->ObtNV()<<endl;
         }
     }
-    Vuelo * obtenerVuelo(int nroDeVuelo ){
+       Vuelo * obtenerVuelo(int nroDeVuelo ){
         Vuelo *p;
         for (auto & aux : listavuelo) {
             if (aux.ObtNV() == nroDeVuelo) {
                 p=&aux;
                 return p;
-            } else {
-                cout << "Nro de Vuelo no encontrado." <<endl;
             }
         }
+        cout << "Nro de Vuelo no encontrado." <<endl;
+        return p;
     }   //Devuelve un Vuelo a partir del Nro de Vuelo (que ya sabemos por el buscarVuelo)
+
     bool Disponibilidad(int cantAsientos, Vuelo * vuelo){
         if(cantAsientos<= vuelo->ObtND())
             return true;
