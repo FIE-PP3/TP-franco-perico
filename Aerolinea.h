@@ -88,7 +88,6 @@ public:
         cout << "Nro de Vuelo no encontrado." <<endl;
         return p;
     }   //Devuelve un Vuelo a partir del Nro de Vuelo (que ya sabemos por el buscarVuelo)
-
     bool Disponibilidad(int cantAsientos, Vuelo * vuelo){
         if(cantAsientos<= vuelo->ObtND())
             return true;
@@ -96,8 +95,10 @@ public:
     }
     void cancelarReservas(int nroReserva){
         for(auto aux= listareserva.begin(); aux != listareserva.end();aux++){
-            if(aux->Nroreserva == nroReserva)
+            if(aux->Nroreserva == nroReserva){            
                 listareserva.erase(aux);
+                aux->~Reserva();
+            }
         }
     }
     list <Reserva> listareserva;
