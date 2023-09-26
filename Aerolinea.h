@@ -54,6 +54,8 @@ public:
                     }
             }       
         }
+        if(!listaDeVuelo.size())
+            cout<<"No se encontro vuelo buscado"<<endl;
         return listaDeVuelo;
     }
     void hacerReserva(Vuelo * vuelo, Usuario * usuario, int cantAsiento){
@@ -73,8 +75,9 @@ public:
             }
             vuelo->restarAsientosDisponibles(cantAsiento);
             usuario->AgregarReserva(reserva);
+            cout<<"Se genero la reserva Nro "<<nrosreserva<<" del usuario "<<usuario->getnombre()<<" con "<<cantAsiento<<" pasajeros"<<endl;
         } else {
-            cout<<"No hay "<<cantAsiento<<" disponible en el vuelo Nro"<<vuelo->ObtNV()<<endl;
+            cout<<"No hay "<<cantAsiento<<" asiento/s disponible/s en el Vuelo Nro "<<vuelo->ObtNV()<<endl;
         }
     }
        Vuelo * obtenerVuelo(int nroDeVuelo ){
