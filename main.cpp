@@ -12,7 +12,7 @@ void menuPrincipal(Aerolinea & nuestraAerolinea) {
     Vuelo * vueloareservar;                     //Declaración de punteros a un Objeto de la clase Vuelo
     Usuario * usuarioQueReserva;                //Declaración de punteros a un Objeto de la clase Vuelo
     while (true) {
-        cout << endl << "Menú Principal:" << endl;      //Menú de Jerarquía 1
+        cout << endl << "Menú Principal:" << endl;
         cout << "1. Ingrese a su cuenta" << endl;
         cout << "2. Registrarme" << endl;
         cout << "3. Salir" << endl;
@@ -20,9 +20,9 @@ void menuPrincipal(Aerolinea & nuestraAerolinea) {
         cin >> opcion;
         switch (opcion) {
             case 1:{//Opción para ingresar con credencial de un usuario    //Menú de Jerarquía 2
-                cout << endl<< "Ingrese su nombre de usuario" << endl;  //Menú de Jerarquía 2
+                cout << endl<< "Ingrese su nombre de usuario" << endl; 
                 cin>>name_login;
-                if(nuestraAerolinea.Accesousuario(name_login)){      //funcion si existe el usuario "true" si no existe "false" y vuelve al menu principal
+                if(nuestraAerolinea.Accesousuario(name_login)){      //funcion booleanaa que retorna al menu principal si el usuario no existe
                     MenuUsuario=true;
                     while(MenuUsuario){
                         cout<< endl<<"1- Buscar Vuelos"<< endl;
@@ -32,7 +32,7 @@ void menuPrincipal(Aerolinea & nuestraAerolinea) {
                         cin>> opcion;
                         switch (opcion)
                         {
-                        case 1://funcion de la aerolinea BuscarVuelos
+                        case 1://Opción para buscar vuelos
                             cout<< endl<<"Ingresa el origen"<< endl;
                             cin>>origen;
                             cout<<"Ingresa la hora de salida"<< endl;
@@ -54,7 +54,7 @@ void menuPrincipal(Aerolinea & nuestraAerolinea) {
                                 cout<<"Vuelos encontrados:"<<endl;
                             nuestraAerolinea.imprimir(vuelosencontrados);
                             break;
-                        case 2:
+                        case 2://Opción para gestionar reservas
                             cout<< endl<<"1- Hacer Reservas"<<endl;
                             cout<<"2- Cancelar Reservas"<<endl;
                             cout << "Seleccione una opción: ";
@@ -81,13 +81,13 @@ void menuPrincipal(Aerolinea & nuestraAerolinea) {
                             default:
                                 break;
                             }
-                        case 3:
+                        case 3://Opción para volver al menú principal
                             MenuUsuario=false;
                             break;
                         }
                     }
                 }
-                else {
+                else {//Opción para usuario no válido
                     cout<<"Ingreso un usuario no valido"<<endl;
                 }
                 break;
@@ -109,8 +109,8 @@ void menuPrincipal(Aerolinea & nuestraAerolinea) {
             default:
                 cout << "Opción no válida. Por favor, selecciona una opción válida." << endl;
         }
-    } //Menú Principal
-}       //Menú Principal
+    } //Menú de jerarquía 1
+}       //Función Menú Principal
 
 int main() {
     ///INICIALIZACION////
