@@ -29,7 +29,8 @@ public:
     void imprimir (list <Vuelo> & mostrar){
         for (auto & aux :mostrar)
         {
-            cout<<"Nro de vuelo "<<aux.ObtNV()<<" Origen: "<< aux.getOrigen()<<" Destino: "<<aux.getDestino()<<" Cantidad de asientos disponibles "<<aux.ObtND()<<endl;
+            cout <<"--------------------------------------" << endl;
+            cout<<"Nro de vuelo: "<<aux.ObtNV()<<".\nOrigen: "<< aux.getOrigen()<<".\nDestino: "<<aux.getDestino()<<".\nCantidad de asientos disponibles: "<<aux.ObtND()<<".\n";
         }
         
     }
@@ -55,7 +56,7 @@ public:
             }       
         }
         if(!listaDeVuelo.size())
-            cout<<"No se encontro vuelo buscado"<<endl;
+            cout<<"No se encontro vuelos con los parametros buscados. "<<endl;
         return listaDeVuelo;
     }
     void hacerReserva(Vuelo * vuelo, Usuario * usuario, int cantAsiento){
@@ -66,18 +67,18 @@ public:
             int dniPasajero;
             Pasajero pasajeroACargar("",0);
             for(int i=0;i<cantAsiento;i++){
-                cout<<"- Como se llama el pasajero nro "<<i+1<<"?"<<endl;
+                cout<<"Ingresar el nombre del pasajero nro "<<i+1<<" : "<<endl;
                 cin>>nombrepasajero;
-                cout<<"- Cual es su DNI "<<endl;
+                cout<<"Ingresar el DNI del pasajero: "<<endl;
                 cin>>dniPasajero;          
                 Pasajero pasajeroACargar(nombrepasajero,dniPasajero);
                 reserva.AgregarPasajero(pasajeroACargar);
             }
             vuelo->restarAsientosDisponibles(cantAsiento);
             usuario->AgregarReserva(reserva);
-            cout<<"Se genero la reserva Nro "<<nrosreserva<<" del usuario "<<usuario->getnombre()<<" con "<<cantAsiento<<" pasajeros"<<endl;
+            cout<<"Se genero la reserva Nro "<<nrosreserva<<" del usuario "<<usuario->getnombre()<<" con "<<cantAsiento<<" pasajeros. "<<endl;
         } else {
-            cout<<"No hay "<<cantAsiento<<" asiento/s disponible/s en el Vuelo Nro "<<vuelo->ObtNV()<<endl;
+            cout<<"No hay "<<cantAsiento<<" asiento/s disponible/s en el Vuelo Nro "<<vuelo->ObtNV()<< " . "<< endl;
         }
     }
        Vuelo * obtenerVuelo(int nroDeVuelo ){
